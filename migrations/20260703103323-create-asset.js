@@ -49,7 +49,7 @@ module.exports = {
       },
 
       branch: {
-        type: Sequelize.ENUM("Chennai", "Bangalore", "Hyderabad"),
+        type: Sequelize.ENUM("Coimbatore", "Chennai", "Bangalore"),
         allowNull: false,
       },
 
