@@ -1,0 +1,49 @@
+extends ../layout
+
+block content
+
+  h3 Asset List
+
+  a.btn.btn-success.mb-3(href="/asset/add")
+    | Add Asset
+
+  .row.mb-3
+
+    .col-md-3
+      select.form-select#statusFilter
+        option(value="") All Status
+        option(value="In Stock") In Stock
+        option(value="Issued") Issued
+        option(value="Scrapped") Scrapped
+
+    .col-md-3
+      select.form-select#categoryFilter
+
+    .col-md-3
+      input.form-control#makeFilter(
+        type="text"
+        placeholder="Search Make"
+      )
+
+    .col-md-3
+      input.form-control#modelFilter(
+        type="text"
+        placeholder="Search Model"
+      )
+
+  table.table.table-bordered#assetTable
+    thead
+      tr
+        th Asset Code
+        th Asset Name
+        th Serial Number
+        th Category
+        th Make
+        th Model
+        th Branch 
+        th Purchace Price
+        th Status
+        th Action
+
+block scripts
+  script(src="/js/asset.js")

@@ -1,0 +1,34 @@
+extends ../layout
+
+block content
+
+    h3 Add Category
+
+    div#message.mt-3
+
+    form#categoryForm
+
+        input(type="hidden" id="id" name="id")
+
+
+        .mb-3
+            label.form-label Category Name
+            input.form-control(type="text", name="categoryName")
+
+        .mb-3
+            label.form-label Description
+            input.form-control(type="text", name="description")
+
+
+        .mb-3
+            label.form-label Status
+
+            select.form-select(name="status")
+                option(value="Active") Active
+                option(value="Inactive") Inactive
+
+        button.btn.btn-primary(type="submit")
+            | Save
+
+block scripts
+    script(src="/js/category.js")

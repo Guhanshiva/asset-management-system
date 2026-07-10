@@ -1,0 +1,54 @@
+extends ../layout
+
+block content
+
+    h3 Edit Asset
+
+    div#message.mt-3
+
+    form#assetForm
+
+        input(type="hidden" id="id" name="id")
+
+        .mb-3
+            label.form-label Asset Code
+            input.form-control(type="text", name="assetCode")
+
+        .mb-3
+            label.form-label Asset Name
+            input.form-control(type="text", name="assetName")
+
+        .mb-3
+            label.form-label Serial Number
+            input.form-control(type="text", name="serialNumber")
+
+        .mb-3
+            label.form-label Category
+            select.form-select(name="categoryId" id="categoryId")
+                option(value="") Select Category
+
+        .mb-3
+            label.form-label Make
+            input.form-control(type="text", name="make")
+
+        .mb-3
+            label.form-label Model
+            input.form-control(type="text", name="model")
+
+        .mb-3
+            label.form-label Status
+            select.form-select(name="status")
+                option(value="In Stock") In Stock
+                option(value="Issued") Issued
+                option(value="Scrapped") Scrapped
+
+        button.btn.btn-primary(type="submit")
+            | Update
+
+block scripts
+
+    script.
+        const assetId = "#{id}";
+        console.log(assetId);
+
+    script(src="/js/asset.js")

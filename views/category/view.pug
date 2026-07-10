@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+
+    h3 View Category
+
+    .card
+        .card-body
+
+            table.table.table-bordered
+
+        
+                tr
+                    th Category Name
+                    td#categoryName
+
+                tr
+                    th Description
+                    td#description
+
+                tr
+                    th Status
+                    td#status
+
+    a.btn.btn-secondary.mt-3(href="/category")
+        | Back
+
+block scripts
+
+    script.
+        const categoryId = "#{id}";
+
+    script(src="/js/category.js")

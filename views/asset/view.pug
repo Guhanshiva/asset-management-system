@@ -1,0 +1,48 @@
+extends ../layout
+
+block content
+
+    h3 View Asset
+
+    .card
+        .card-body
+
+            table.table.table-bordered
+
+                tr
+                    th(width="220") Asset Code
+                    td#assetCode
+
+                tr
+                    th Asset Name
+                    td#assetName
+
+                tr
+                    th Serial Number
+                    td#serialNumber
+
+                tr
+                    th Category
+                    td#categoryName
+
+                tr
+                    th Make
+                    td#make
+
+                tr
+                    th Model
+                    td#model
+
+                tr
+                    th Status
+                    td#status
+
+    a.btn.btn-secondary.mt-3(href="/asset")
+        | Back
+
+block scripts
+
+    script.
+        const assetId = "#{id}";
+
+    script(src="/js/asset.js")

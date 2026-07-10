@@ -1,0 +1,46 @@
+extends ../layout
+
+block content
+
+    h3 Edit Employee
+
+    div#message.mt-3
+
+    form#employeeForm
+
+        input(type="hidden" id="id" name="id")
+
+        .mb-3
+            label Employee Code
+            input.form-control(type="text", name="empCode")
+
+        .mb-3
+            label Name
+            input.form-control(type="text", name="name")
+
+        .mb-3
+            label Email
+            input.form-control(type="email", name="email")
+
+        .mb-3
+            label Department
+            input.form-control(type="text", name="department")
+
+        .mb-3
+            label Designation
+            input.form-control(type="text", name="designation")
+
+        .mb-3
+            label Status
+            select.form-select(name="status")
+                option(value="Active") Active
+                option(value="Inactive") Inactive
+
+        button.btn.btn-primary(type="submit") Update
+
+block scripts
+
+    script.
+        const employeeId = "#{id}";
+
+    script(src="/js/employee.js")

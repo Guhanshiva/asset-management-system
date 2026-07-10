@@ -1,0 +1,54 @@
+extends ../layout
+
+block content
+
+    h3 Stock View
+
+    .row.mb-4
+
+        .col-md-6
+            .card.border-success
+                .card-body
+                    h5 Total Assets
+                    h3#totalAssets 0
+
+        .col-md-6
+            .card.border-primary
+                .card-body
+                    h5 Total Value
+                    h3 ₹
+                        span#totalValue 0
+
+    h4 Branch Summary
+
+    table.table.table-bordered.mb-4
+        thead
+            tr
+                th Branch
+                th Total Assets
+                th Total Value
+        tbody#branchSummary
+
+    h4 Asset List
+
+    table.table.table-bordered#stockTable
+        thead
+            tr
+                th Asset Code
+                th Asset Name
+                th Serial Number
+                th Category
+                th Make
+                th Model
+                th Branch
+                th Purchase Price
+                th Status
+
+        tfoot
+            tr
+                th(colspan="7") Grand Total
+                th#footerTotalValue
+                th#footerTotalAssets
+
+block scripts
+    script(src="/js/stock.js")

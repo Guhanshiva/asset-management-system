@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+
+  h3 Employee List
+
+  a.btn.btn-success.mb-3(href="/employees/add")
+    | Add Employee
+    
+
+  select.form-select#statusFilter
+    option(value="") All
+    option(value="Active") Active
+    option(value="Inactive") Inactive  
+
+
+  table.table.table-bordered#employeeTable
+    thead
+      tr
+        th Employee Code
+        th Name
+        th Email
+        th Department
+        th Designation
+        th Status
+        th Action
+
+block scripts
+  script(src="/js/employee.js")

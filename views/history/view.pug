@@ -1,0 +1,70 @@
+extends ../layout
+
+block content
+
+    h3 Asset History
+
+    h4.mt-4 Asset Details
+
+    table.table.table-bordered
+
+        tr
+            th(width="220") Asset Code
+            td#assetCode
+
+        tr
+            th Asset Name
+            td#assetName
+
+        tr
+            th Serial Number
+            td#serialNumber
+
+        tr
+            th Category
+            td#categoryName
+
+        tr
+            th Make
+            td#make
+
+        tr
+            th Model
+            td#model
+
+        tr
+            th Branch
+            td#branch
+
+        tr
+            th Purchase Price
+            td#purchasePrice
+
+        tr
+            th Status
+            td#status
+
+    h4.mt-4 Issue / Return History
+
+    table.table.table-bordered
+        thead
+            tr
+                th Employee Code
+                th Employee Name
+                th Department
+                th Issue Date
+                th Return Date
+                th Return Reason
+                th Status
+
+        tbody#historyBody
+
+    a.btn.btn-secondary.mt-3(href="/stock/history")
+        | Back
+
+block scripts
+
+    script.
+        const assetId = "#{id}";
+
+    script(src="/js/history.js")

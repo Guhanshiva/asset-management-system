@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+
+  h3 Scrap List
+
+  a.btn.btn-success.mb-3(href="/scrap/add")
+    | Add Scrap
+    
+  table.table.table-bordered#scrapTable
+    thead
+      tr
+        th Asset Name
+        th Serial Number
+        th Scrap Date
+        th Purchanse Price
+        th Reason
+
+block scripts
+  script(src="/js/scrap.js")

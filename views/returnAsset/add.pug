@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+
+    h3 Return Asset
+
+    div#message.mt-3
+
+    form#returnAssetForm
+
+        input(type="hidden" id="id" name="id")
+
+        .mb-3
+            label.form-label Issued Asset
+            select.form-select(name="issueAssetId" id="issueAssetId")
+                option(value="") Select Issued Asset
+
+        .mb-3
+            label.form-label Return Date
+            input.form-control(type="date", name="returnDate")
+
+        .mb-3
+            label.form-label Return Reason
+            select.form-select(name="reason")
+                option(value="") Select Reason
+                option(value="Upgrade") Upgrade
+                option(value="Repair") Repair
+                option(value="Resignation") Resignation
+                option(value="Other") Other
+
+        button.btn.btn-primary(type="submit")
+            | Save
+
+block scripts
+    script(src="/js/returnAsset.js")

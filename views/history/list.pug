@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+
+    h3 Asset History
+
+    table.table.table-bordered#historyTable
+        thead
+            tr
+                th Asset Code
+                th Asset Name
+                th Serial Number
+                th Category
+                th Make
+                th Model
+                th Branch
+                th Purchase Price
+                th Status
+                th Action
+
+block scripts
+    script(src="/js/history.js")

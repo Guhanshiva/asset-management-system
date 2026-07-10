@@ -1,0 +1,68 @@
+extends ../layout
+
+block content
+
+    h3 View Return Asset
+
+    .card
+        .card-body
+
+            table.table.table-bordered
+
+                tr
+                    th(width="220") Employee Code
+                    td#empCode
+
+                tr
+                    th Employee Name
+                    td#employeeName
+
+                tr
+                    th Department
+                    td#department
+
+                tr
+                    th Asset Code
+                    td#assetCode
+
+                tr
+                    th Asset Name
+                    td#assetName
+
+                tr
+                    th Serial Number
+                    td#serialNumber
+
+                tr
+                    th Make
+                    td#make
+
+                tr
+                    th Model
+                    td#model
+
+                tr
+                    th Issue Date
+                    td#issueDate
+
+                tr
+                    th Return Date
+                    td#returnDate
+
+                tr
+                    th Return Reason
+                    td#reason
+
+                tr
+                    th Status
+                    td#status
+
+    a.btn.btn-secondary.mt-3(href="/return")
+        | Back
+
+block scripts
+
+    script.
+        const returnId = "#{id}";
+
+    script(src="/js/returnAsset.js")

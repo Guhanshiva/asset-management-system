@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+
+    h3 Edit Issued Asset
+
+    div#message.mt-3
+
+    form#issueAssetForm
+
+        input(type="hidden" id="id" name="id")
+
+        .mb-3
+            label.form-label Employee
+            select.form-select(name="employeeId" id="employeeId")
+
+        .mb-3
+            label.form-label Asset
+            select.form-select(name="assetId" id="assetId")
+
+        .mb-3
+            label.form-label Issue Date
+            input.form-control(type="date" name="issueDate")
+
+        .mb-3
+            label.form-label Status
+            select.form-select(name="status")
+                option(value="Issued") Issued
+                option(value="Returned") Returned
+
+        button.btn.btn-primary(type="submit")
+            | Update
+
+block scripts
+
+    script.
+        const issueId = "#{id}";
+
+    script(src="/js/issueAsset.js")

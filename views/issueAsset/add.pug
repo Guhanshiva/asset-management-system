@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+
+    h3 Issue Asset
+
+    div#message.mt-3
+
+    form#issueAssetForm
+
+        input(type="hidden" id="id" name="id")
+
+        .mb-3
+            label.form-label Employee
+            select.form-select(name="employeeId" id="employeeId")
+                option(value="") Select Employee
+
+        .mb-3
+            label.form-label Asset
+            select.form-select(name="assetId" id="assetId")
+                option(value="") Select Asset
+
+        .mb-3
+            label.form-label Issue Date
+            input.form-control(type="date" name="issueDate")
+
+        button.btn.btn-primary(type="submit")
+            | Save
+
+block scripts
+    script(src="/js/issueAsset.js")

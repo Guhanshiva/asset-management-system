@@ -1,0 +1,44 @@
+extends ../layout
+
+block content
+
+    h3 View Employee
+
+    .card
+        .card-body
+
+            table.table.table-bordered
+
+                tr
+                    th(width="200") Employee Code
+                    td#empCode
+
+                tr
+                    th Name
+                    td#name
+
+                tr
+                    th Email
+                    td#email
+
+                tr
+                    th Department
+                    td#department
+
+                tr
+                    th Designation
+                    td#designation
+
+                tr
+                    th Status
+                    td#status
+
+    a.btn.btn-secondary.mt-3(href="/employees")
+        | Back
+
+block scripts
+
+    script.
+        const employeeId = "#{id}";
+
+    script(src="/js/employee.js")

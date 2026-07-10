@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+
+    h3 Add Scrap
+
+    div#message.mt-3
+
+    form#scrapForm
+
+        input(type="hidden" id="id" name="id")
+
+    
+        .mb-3
+            label.form-label Asset
+            select.form-select(name="assetId" id="assetId")
+                option(value="") Select Asset
+
+        .mb-3
+            label.form-label scrapDate
+            input.form-control(type="date", name="scrapDate")
+
+        .mb-3
+            label.form-label Reason
+            input.form-control(type="text", name="reason")
+
+    
+
+        button.btn.btn-primary(type="submit")
+            | Save
+
+block scripts
+    script(src="/js/scrap.js")

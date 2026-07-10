@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+
+  h3 Issue Asset List
+
+  a.btn.btn-success.mb-3(href="/issue/add")
+    | Issue Asset
+
+  table.table.table-bordered#issueAssetTable
+    thead
+      tr
+        th Employee Code
+        th Employee Name
+        th Department
+        th Asset Code
+        th Asset Name
+        th Make
+        th Model
+        th Issue Date
+        th Status
+        th Action
+
+block scripts
+  script(src="/js/issueAsset.js")
